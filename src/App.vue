@@ -3,7 +3,7 @@ import type { MenuOption } from "naive-ui";
 import { NEllipsis } from "naive-ui";
 import { h, defineAsyncComponent, markRaw, reactive, ref } from "vue";
 
-const active = ref("1");
+const active = ref("2");
 const setActive = (key: string) => {
   console.log(key);
 
