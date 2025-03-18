@@ -1,7 +1,7 @@
 <script setup>
 import * as dat from "dat.gui";
 
-import { onMounted, ref } from "vue";
+import { onMounted, ref, onUnmounted } from "vue";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -213,6 +213,9 @@ onMounted(() => {
     renderer.render(scene, camera);
     animate();
   }
+});
+onUnmounted(() => {
+  gui.destroy();
 });
 </script>
 
